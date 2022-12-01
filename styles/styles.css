@@ -145,7 +145,7 @@ main {
     .navbar{
         bottom: 0;
         width: 100vw;
-        height: 5rem;
+        height: 4rem;
     }
 
     .logo {
@@ -190,6 +190,7 @@ main {
         width: 60vw;
         margin-left: 0px;
         margin-top: 15px;
+        margin-bottom: 20px;
     }
 }
 
