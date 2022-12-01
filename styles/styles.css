@@ -1,0 +1,380 @@
+:root {
+    font-size: 16px;
+    font-family: 'Playfair';
+    --text-primary: #b6b6b6;
+    --text-seconday: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary:#141418;
+}
+
+body {
+    color: black;
+    background-color: #faf7ff;
+    margin: 0;
+    padding: 0;
+}
+
+
+main {
+    margin-left: 4rem;
+    padding: 1rem;
+}
+
+/* Navigation Section */
+
+.navbar {
+    position: fixed;
+    background-color: var(--bg-primary);
+    transition: width 200ms ease;
+}
+
+.navbar-nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+} 
+
+.nav-item{
+    width: 100%;
+}
+
+.nav-item:last-child {
+    margin-top: auto;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: 600ms;
+}
+
+.link-text {
+    display: none;
+}
+
+.nav-link svg {
+    min-width: 2rem;
+    margin: 0 1.5rem;
+    width: 2rem;
+
+}
+.nav-link:hover{
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg-secondary);
+    color: var(--text-seconday);
+}
+
+.fa-primary {
+    fill:#00b3ad;
+    transition: 600ms;
+}
+
+.logo {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--text-seconday);
+    background: var(--bg-secondary);
+    font-size: 1.5rem;
+    letter-spacing: 0.2ch;
+}
+
+.logo svg {
+    transform: rotate(0deg);
+    transition: transform 600ms;
+}
+
+.navbar:hover .logo svg {
+    transform: rotate(-90deg);
+}
+
+/* Large Screens */
+@media only screen and (min-width: 800px) {
+    .navbar{
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+    }
+
+    .navbar:hover {
+        width: 16rem;
+    }
+
+    .navbar:hover .link-text{
+        display: inline;
+        transition: 600ms;
+    }   
+    
+    /* Home Page */
+    .flex-squares {
+        display: flex;
+        justify-content: center;
+        margin-top: -110px;
+    }
+
+    .square {
+        width: 22vw;
+        margin: 16px;
+        padding: 32px;
+    }
+
+    /* Street and Off-Road Page */
+    .buy-car {
+        width: 34vw;
+        margin-left: 32px;
+    }
+
+    .flex-car img {
+        width: 34vw;
+        margin-right: 32px;
+    }
+}
+
+/* Small Screens */ 
+
+@media only screen and (max-width: 800px) {
+    .navbar{
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .navbar-nav{
+        flex-direction: row;
+    }
+
+    .nav-link {
+        justify-content: center;
+    }
+    
+    main {
+        margin: 0;
+    }
+
+    /* Home Page */
+    .flex-squares {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }    
+
+    .square {
+        width: 60vw;
+        margin: 16px;
+        padding: 32px;
+    }
+
+    /* Street and Off-Road Page */
+    .flex-car{
+        flex-direction: column;
+    }
+    .flex-car img {
+        width: 60vw;
+    }
+
+    .buy-car {
+        width: 60vw;
+        margin-left: 0px;
+        margin-top: 15px;
+    }
+}
+
+/* Index.HTML Page */
+.banner {
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    background-position: bottom;
+    width: 100vw;
+    height: 475px;
+    margin-top: -16px;
+}
+
+.square-green {
+    background-color:#00b3ad ;
+}
+
+.square-blue {
+    background-color:#5ec2a0;
+}
+
+.flex-squares h2 {
+    color: #2f4858;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.our-paragraph {
+    color: white;
+    font-size: 24px;
+}
+
+.more {
+    color: white;
+}
+
+.home-info {
+    font-size: 20px;
+    margin: 24px 48px 0px 48px;
+}
+
+/* Street Car */
+
+.car-catalog {
+    margin: 48px 100px;
+}
+
+#car-title {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.car-catalog p {
+    font-size: 19px;
+}
+
+.flex-car {
+    display: flex;
+    justify-content: center;
+}
+
+.buy-car h2 {
+    color: white;
+    margin: 32px;
+    font-size: 24px;
+}
+
+.buy-car p {
+    color: white;
+    margin: 0px 32px;
+    font-size: 19px;
+    font-weight: lighter;
+}
+
+.buy-car-btn {
+    float: right;
+    margin-right: 32px;
+    margin-top: 24px;
+    width: 140px;
+    height: 60px;
+    border: white 4px solid;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+}
+
+.buy-car-btn:hover, .ct-btn:hover {
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Contact Page */ 
+
+.contact-bg {
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.contact-blue {
+    background-color:#00b3ad ;
+    width: 800px;
+    height: 425px;
+    margin-top: 64px;
+    padding: 32px;
+}
+
+.contact-blue h1 {
+    color: #2f4858;
+    font-size: 42px;
+    font-weight: normal;
+    margin: 0; padding: 0;
+    display: block;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.form-shell {
+    margin: 32px;
+    padding: 0;
+}
+
+.flex-form{
+    display: flex;
+    margin-left: 6px;
+}
+
+.form-lt, .form-rt {
+    width: 100%;
+}
+
+.form-lt {
+    margin-right: 12px;
+}
+
+.form-rt {
+    margin-left: 12px;
+}
+
+.ct-input {
+    width: 100%;
+}
+
+.ct-input, .ct-msg {
+    background-color: #B3B3BC;
+    font-size: 24px;
+    appearance: none;
+    border: 0;
+    color: black;
+    outline: none;
+}
+
+.ct-label {
+    margin: 6px;
+    color: white;
+    font-size: 21px;
+}
+
+.ct-msg {
+    width: 100%;
+    height: 150px;
+    padding: 0;
+    margin: 21px 12px 21px 6px;
+}
+
+.ct-input:focus, .ct-msg:focus {
+    border: 3px solid white;
+}
+
+.ct-btn {
+    margin-right: 0px;
+    margin-top: 24px;
+    padding: 0;
+    width: 170px;
+    height: 50px;
+    float: right;
+    border: 4px solid white;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
