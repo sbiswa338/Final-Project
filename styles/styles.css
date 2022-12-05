@@ -128,6 +128,11 @@ main {
     }
 
     /* Street and Off-Road Page */
+
+    .car-catalog {
+        margin: 48px 100px;
+    }    
+
     .buy-car {
         width: 34vw;
         margin-left: 32px;
@@ -137,6 +142,47 @@ main {
         width: 34vw;
         margin-right: 32px;
     }
+
+    .buy-car-btn {
+        float: right;
+        margin-right: 32px;
+        margin-top: 104px;
+        width: 140px;
+        height: 60px;
+        border: white 4px solid;
+        text-align: center;
+        color: white;
+        font-size: 15px;
+    }
+
+    /* Buy Page */
+
+    .outer-section {
+        margin: 48px 56px;
+        display: flex;
+        justify-content: center;
+    }    
+
+    #car {
+        width: 500px;
+        margin-left: 42px;
+    }
+    
+    .buy-lt {
+        margin-right: 42px;
+        width: 600px;
+    }
+    
+    .buy-rt {
+        width: 600px;
+        margin-left: 42px;
+    }
+    
+    .ship-info {
+        margin-top: 24px;
+        width: 600px;
+    }
+        
 }
 
 /* Small Screens */ 
@@ -160,11 +206,18 @@ main {
         justify-content: center;
     }
     
+    .nav-item:last-child {
+        margin-top: 0px;
+    }
+    
     main {
         margin: 0;
     }
 
     /* Home Page */
+    .banner{
+        display: none;
+    }
     .flex-squares {
         display: flex;
         justify-content: center;
@@ -173,12 +226,17 @@ main {
     }    
 
     .square {
-        width: 60vw;
+        width: 70vw;
         margin: 16px;
         padding: 32px;
     }
 
     /* Street and Off-Road Page */
+
+    .car-catalog {
+        margin: 48px 60px;
+    }    
+
     .flex-car{
         flex-direction: column;
     }
@@ -192,6 +250,44 @@ main {
         margin-top: 15px;
         margin-bottom: 20px;
     }
+
+    .buy-car-btn {
+        float: right;
+        margin-right: 32px;
+        margin-top: 24px;
+        margin-bottom: 15px;
+        width: 140px;
+        height: 60px;
+        border: white 4px solid;
+        text-align: center;
+        color: white;
+        font-size: 15px;
+    }
+
+    /* Buy Page*/
+    .outer-section {
+        width: 70vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 48px 40px;
+    }
+
+    #car {
+        width: 80vw;
+        margin-left: 0px;
+    }
+
+    .buy-lt {
+        margin-right: 0px;
+        width: 300px;
+    }
+    
+    .buy-rt {
+        width: 300px;
+        margin-left: 0px;
+    }
 }
 
 /* Index.HTML Page */
@@ -199,7 +295,7 @@ main {
     background-image: url(../images/banner.jpg);
     background-size: cover;
     background-position: bottom;
-    width: 100vw;
+    width: 95.85vw;
     height: 475px;
     margin-top: -16px;
 }
@@ -232,11 +328,7 @@ main {
     margin: 24px 48px 0px 48px;
 }
 
-/* Street Car */
-
-.car-catalog {
-    margin: 48px 100px;
-}
+/* Street Car Page */
 
 #car-title {
     margin: 0;
@@ -262,20 +354,8 @@ main {
 .buy-car p {
     color: white;
     margin: 0px 32px;
-    font-size: 19px;
+    font-size: 24px;
     font-weight: lighter;
-}
-
-.buy-car-btn {
-    float: right;
-    margin-right: 32px;
-    margin-top: 24px;
-    width: 140px;
-    height: 60px;
-    border: white 4px solid;
-    text-align: center;
-    color: white;
-    font-size: 15px;
 }
 
 .buy-car-btn:hover, .ct-btn:hover {
@@ -379,3 +459,77 @@ main {
     cursor: pointer;
 }
 
+
+/* Buy Page */
+
+.ship {
+    display: flex;
+}
+
+.ship-lt, .ship-rt {
+    width: 100%;
+}
+.ship-lt {
+    margin-right: 12px;
+}
+
+.order-label, .contact-label{
+    font-size: 21px;
+}
+
+select {
+    height: 30px;
+    background-color: #B3B3BC;
+    font-size: 24px;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    border: 0;
+    color: white;
+    outline: none;
+    width: 100%;
+    text-align: center;
+}
+
+#btn-purchase {
+    background-color: #31881B;
+    border-color: #31881B;
+    border-radius: 15px;
+    font-size: 21px;
+    color: white;
+    width: 170px;
+    height: 60px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    float: right;
+    cursor: pointer;
+}
+
+.custom-label {
+    font-size: 19px;
+    margin-top: 32px;
+}
+
+.order-show {
+    margin-top: 32px;
+    background-color: #B3B3BC;
+    display: flex;
+    width: 100%;
+}
+
+.receipt-lt {
+    flex-grow: 3;
+    margin-left: 12px;
+}
+
+.receipt-rt {
+    margin-right: 12px;
+}
+
+.amount {
+    text-align: center;
+}
+
+.rec-rt{
+    text-align: right;
+    margin-right: 16px;
+}

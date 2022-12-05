@@ -51,5 +51,123 @@
             </li>
         </ul>
 </nav>
+    <main>
+    <!-- Buy information -->
+    <div class="outer-section">
+        <!-- Left side -->
+        <div class="buy-lt">
+            <img id="car" src="images/Sport.jpg" alt="sport">
+            <form class="ship-info">
+                <input class="ct-input" type="text" id="name"><br>
+                <label class="contact-label" for="name">Name</label><br>
+                <input class="ct-input" type="text" id="address"><br>
+                <label class="contact-label" for="address">Address</label><br>
+                <input class="ct-input" type="text" id="city"><br>
+                <label class="contact-label" for="city">City</label><br>
+
+                <div class="ship">
+                    <div class="ship-lt">
+                        <input class="ct-input" type="text" id="state"><br>
+                        <label class="contact-label" for="state">State</label>
+                    </div>
+                    <div class="ship-rt">
+                        <input class="ct-input" type="text" id="zip"><br>
+                        <label class="contact-label" for="zip">Zipcode</label>
+                    </div>
+                </div>
+
+                <input class="ct-input" type="text" id="phone"><br>
+                <label class="contact-label" for="phone">Phone</label>
+            </form>
+        </div>
+
+        <!-- Right side -->
+        <div class="buy-rt">
+            <form>
+
+                <!-- Choose Car -->
+                <section class="car-choice">
+                    <select name="car" id="car-style" onchange="changeImage()">
+                        <option disabled selected value>-- Select Your Car Style --</option>
+                        <option value="Sport">Sport</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Classic">Classic</option>
+                        <option value="ATV">ATV</option>
+                        <option value="Dune Buggy">Dune Buggy</option>
+                        <option value="Crawler">Crawler</option>
+                    </select> <br>
+                    <label class="order-label" for="car-style">Car Style</label>
+                </section>
+                                <!-- Shell Color -->
+                <section class="car-color" id="car-section">
+                    <select name="car-color" id="car-color-style" onchange="updateOrder()">
+                        <option disabled selected value>-- Select your Car Shell Color</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Green">Green</option>
+                        <option value="Red">Red</option>
+                        <option value="Chrome">Chrome</option>
+                        <option value="Black">Black</option>
+                        <option value="Gold">Yellow</option>
+                    </select><br>
+                    <label class="order-label" for="car-color-style">Car Shell Color</label>
+                </section>
+
+                <!-- Custom option 1 -->
+                <p class="custom-label" id="custom-label">We offer the following Optional Add-ons. Check all that apply.</p>
+                <div class="custom-options" id="custom-options">
+                    <section class="co-items">
+                        <input type="checkbox" id="military-shell" value="Military Shell" onchange="customMilitary()">
+                        <label for="military-shell" class="order-label">Military Shell</label><br> 
+
+                        <input type="checkbox" id="truck-shell" value="Truck Shell" onchange="customTruck()">
+                        <label for="truck-shell" class="order-label">Truck Shell</label><br>
+
+                        <input type="checkbox" id="wheels-tires" value="Wheels & Tires" onchange="customWheel()">
+                        <label for="wheels-tires" class="order-label">Extra Wheels & Tires</label><br>
+                       
+                        <input type="checkbox" id="extra-battery" value="Extra Battery" onchange="customBattery()">
+                        <label for="extra-battery" class="order-label">Extra Battery</label><br>
+                    </section>
+                </div>
+            </form>
+                
+
+                <button id="btn-purchase" onclick="reserveOrder()">Purchase</button>
+                <div class="order-show" id="order-show">
+                    <div class="receipt-lt">
+                        <p class="rec-lt" id="rec-car"></p>
+                        <p class="rec-lt" id="rec-color"></p>
+                        <p class="rec-lt" id="rec-serial"></p>
+                        <p class="rec-lt" id="rec-mshell"></p>
+                        <p class="rec-lt" id="rec-tshell"></p>
+                        <p class="rec-lt" id="rec-wheels"></p>
+                        <p class="rec-lt" id="rec-battery"></p>
+                        <p class="rec-rt">Sub Total</p>
+                        <p class="rec-rt">Tax</p>
+                        <p class="rec-rt">Total</p>
+                    </div>
+                    <div class="receipt-rt">
+                        <p class="amount" id="rec-car-price"></p>
+                        <p class="amount" id="rec-color-price"></p>
+                        <p class="amount">included</p>
+                        <p class="amount" id="rec-mshell-price"></p>
+                        <p class="amount" id="rec-tshell-price"></p>
+                        <p class="amount" id="rec-wheels-price"></p>
+                        <p class="amount" id="rec-battery-price"></p>
+                        <p class="amount" id="rec-subtotal"></p>
+                        <p class="amount" id="rec-tax"></p>
+                        <p class="amount" id="rec-total"></p>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+
+
+    </main>
+
+
+
+    <script src="scripts/buy.js"></script>
 </body>
 </html>
